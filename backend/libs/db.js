@@ -3,7 +3,7 @@ import mongoose from 'mongoose'
 export const connectDb = async () => {
 
     try {
-        mongoose.connect.on('connection', () => {
+        mongoose.connection.on('connected', () => {
             console.log('Connected to database')
 
         })
@@ -13,3 +13,4 @@ export const connectDb = async () => {
         console.log("Error connecting to database", error)
     }
 } 
+
